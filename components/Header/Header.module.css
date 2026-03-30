@@ -1,0 +1,157 @@
+.headerBox {
+  display: flex;
+  margin-top: 10px;
+  padding: 20px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation {
+  display: none;
+}
+
+.burgerBtn {
+  background-color: inherit;
+  display: flex;
+}
+
+.headerHeroBlock {
+  background-color: #f6b83d;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  padding: 18px 20px;
+}
+
+.menuBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.userIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background-color: #fff4df;
+  width: 40px;
+  height: 40px;
+}
+
+.container {
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+
+  .logoSvg {
+    width: 106px;
+    height: 28px;
+  }
+
+  .headerHeroBlock {
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    padding: 23px 32px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    padding: 0 64px;
+  }
+
+  .mainSiteContainer {
+    padding: 0 32px;
+  }
+  .headerHeroBlock {
+    padding: 16px 64px;
+  }
+
+  .menuBox {
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+
+  .menuNav {
+    display: flex;
+    gap: 10px;
+    margin: 0 auto;
+  }
+
+  .menuItem {
+    line-height: 1.25;
+    letter-spacing: -0.03em;
+    border: 1px solid rgba(38, 38, 38, 0.15);
+    border-radius: 30px;
+    padding: 15px 20px;
+    transition:
+      background-color 300ms ease-in-out,
+      color 300ms ease-in-out;
+  }
+
+  .menuItem:hover,
+  .menuItem:focus {
+    background-color: #fff4df;
+    color: #f6b83d;
+  }
+
+  .menuItemHeroBlock {
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .registrationList {
+    display: flex;
+    gap: 8px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  .registrationItem {
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 30px;
+    padding: 15px 20px;
+  }
+
+  .registrationLoginBtn {
+    background-color: #f6b83d;
+    transition:
+      color 300ms ease-in-out,
+      background-color 300ms ease-in-out;
+  }
+
+  .registrationLoginBtn:hover,
+  .registrationLoginBtn:focus {
+    color: #f6b83d;
+    background-color: #fff4df;
+  }
+
+  .registrationBtn {
+    background-color: #fff4df;
+    color: #f6b83d;
+    transition: background-color 300ms ease-in-out;
+  }
+
+  .registrationBtn:hover,
+  .registrationBtn:focus {
+    background-color: #fbe7c1;
+  }
+}

@@ -1,0 +1,80 @@
+.heroBox {
+  padding: 50px 20px 50px;
+  background-color: #f6b83d;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.heroSection {
+  margin-bottom: 10px;
+}
+
+.heroTitle {
+  font-size: 50px;
+  line-height: 0.96;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.heroTitle > span {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.heroText {
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.container {
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 402px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+  .imageWrapper {
+    height: 496px;
+  }
+  .heroBox {
+    padding: 80px 32px 44px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  .heroText {
+    width: 255px;
+    margin-left: auto;
+    font-size: 18px;
+    line-height: 1.22222;
+  }
+
+  .heroTitle {
+    font-size: 80px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+  .imageWrapper {
+    height: 384px;
+  }
+  .heroBox {
+    display: flex;
+    align-items: end;
+  }
+}
