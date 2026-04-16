@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header/Header";
+import TanStackProvider from "../components/TanStackProvider/TanStackProvider";
 
 const manorepo = Manrope({
   weight: ["500", "600", "700", "800"],
@@ -20,8 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={manorepo.className}>
       <body>
-        <Header />
-        <main>{children}</main>
+        <TanStackProvider>
+          <Header />
+          <main>{children}</main>
+        </TanStackProvider>
       </body>
     </html>
   );

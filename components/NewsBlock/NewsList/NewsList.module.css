@@ -1,0 +1,51 @@
+.imageWrapper {
+  position: relative;
+  height: 190px;
+}
+
+.newsList {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.newsItem {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.titleNew {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  color: #262626;
+}
+
+.textNew {
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  color: #262626;
+}
+
+.dateBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.createDateNew {
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  color: rgba(38, 38, 38, 0.5);
+}
+
+.linkMore {
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  text-decoration: underline;
+  color: #f6b83d;
+}

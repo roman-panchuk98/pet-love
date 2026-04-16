@@ -97,7 +97,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-
       <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
     </header>
   );

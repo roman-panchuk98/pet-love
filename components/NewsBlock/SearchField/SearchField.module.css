@@ -1,0 +1,45 @@
+.searchBox {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.searchInput {
+  width: 100%;
+  outline: none;
+  border: 1px solid rgba(38, 38, 38, 0.15);
+  border-radius: 30px;
+  padding: 12px;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.03em;
+  transition: border-color 300ms ease-in-out;
+}
+
+.searchInput:hover,
+.searchInput:focus {
+  border-color: #f6b83d;
+}
+
+.iconBox {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.iconBtnCancel {
+  transition: stroke 300ms ease-in-out;
+}
+
+.iconBtnCancel:hover,
+.iconBtnCancel:focus {
+  stroke: #ef2447;
+}
+
+.iconBtnSearch {
+  transition: stroke 300ms ease-in-out;
+}
+
+.iconBtnSearch:hover,
+.iconBtnSearch:focus {
+  stroke: #08aa83;
+}
