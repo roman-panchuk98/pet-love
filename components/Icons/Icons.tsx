@@ -12,7 +12,9 @@ type IconsName =
   | "icon-logo"
   | "icon-logo-white"
   | "icon-Star"
-  | "icon-burger-menu";
+  | "icon-burger-menu"
+  | "icon-chevron-left"
+  | "icon-chevron-right";
 
 type IconsProps = {
   id: IconsName;

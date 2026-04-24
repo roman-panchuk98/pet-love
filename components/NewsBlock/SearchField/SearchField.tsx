@@ -25,6 +25,7 @@ const SearchField = ({
       <input
         className={css.searchInput}
         type="text"
+        name="search"
         placeholder="Search"
         value={value}
         onChange={onChange}

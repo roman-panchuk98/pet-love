@@ -1,0 +1,109 @@
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+  gap: 6px;
+}
+
+.pagination {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  border-radius: 100%;
+  stroke-width: 1px;
+  stroke: rgba(0, 0, 0, 0.23);
+}
+
+.pagination li {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28;
+  transition:
+    background-color 300ms ease-in-out,
+    color 300ms ease-in-out;
+}
+
+.pagination li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active {
+  background-color: #f6b83d;
+  color: #fff;
+}
+
+.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.firstLastBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  border-radius: 100%;
+  transition:
+    background-color 300ms ease-in-out,
+    color 300ms ease-in-out;
+}
+
+.svgSecond {
+  margin-left: -12px;
+}
+
+.nextPreviousBtn {
+  transition: stroke 300ms ease-in-out;
+}
+
+.pagination li:not(.disabled):hover .nextPreviousBtn,
+.pagination li:not(.disabled):focus-within .nextPreviousBtn {
+  stroke: #fff;
+}
+
+.pagination li:not(.disabled):hover,
+.pagination li:not(.disabled):focus-within,
+.firstLastBtn:not(.disabled):hover,
+.firstLastBtn:not(.disabled):focus {
+  background-color: #f6b83d;
+  color: #fff;
+}
+
+.svgFirstLastIcon {
+  stroke: #262626;
+  transition: stroke 300ms ease-in-out;
+}
+
+.firstLastBtn:hover .svgFirstLastIcon,
+.firstLastBtn:focus .svgFirstLastIcon {
+  stroke: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+  .pagination li {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+    line-height: 1.22;
+  }
+
+  .firstLastBtn {
+    width: 44px;
+    height: 44px;
+  }
+}

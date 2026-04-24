@@ -1,12 +1,14 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import css from "./page.module.css";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { getNews } from "//lib/api/api";
 import NewsList from "../../components/NewsBlock/NewsList/NewsList";
 import NewsTitle from "//components/NewsBlock/NewsTitle/NewsTitle";
 import SearchField from "//components/NewsBlock/SearchField/SearchField";
+import Pagination from "//components/Pagination/Pagination";
+import { InstagramEmbed, TikTokEmbed } from "react-social-media-embed";
 
 const NewsClient = () => {
   const [page, setPage] = useState<number>(1);
@@ -32,14 +34,28 @@ const NewsClient = () => {
 
   return (
     <div className={css.container}>
-      <NewsTitle />
-      <SearchField
-        value={inputValue}
-        onChange={(ev) => setInputValue(ev.target.value)}
-        onSubmit={handleSubmit}
-        onClear={handleClear}
-      />
+      <div className={css.titleSearchBox}>
+        <NewsTitle />
+        <SearchField
+          value={inputValue}
+          onChange={(ev) => setInputValue(ev.target.value)}
+          onSubmit={handleSubmit}
+          onClear={handleClear}
+        />
+      </div>
+
       {data && data.results.length > 0 && <NewsList news={data.results} />}
+      {data && data?.totalPages > 1 && (
+        <Pagination
+          totalPages={data?.totalPages ?? 0}
+          page={page}
+          onPageChange={setPage}
+        />
+      )}
+
+      {data && data.results.length === 0 && (
+        <p className={css.noNewsFound}> No news found for your query</p>
+      )}
     </div>
   );
 };

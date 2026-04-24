@@ -43,3 +43,20 @@
 .iconBtnSearch:focus {
   stroke: #08aa83;
 }
+
+@media only screen and (min-width: 768px) {
+  .searchBox {
+    width: 230px;
+    margin-bottom: 0px;
+  }
+
+  .searchInput {
+    font-size: 16px;
+    line-height: 1.25;
+    padding: 13px;
+  }
+  .iconBox {
+    top: 14px;
+    right: 14px;
+  }
+}
