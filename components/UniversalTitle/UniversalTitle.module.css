@@ -1,0 +1,22 @@
+.universalTitle {
+  margin-top: 34px;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.titleWIthInput {
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+@media only screen and (min-width: 768px) {
+  .universalTitle {
+    font-size: 54px;
+    margin-top: 76px;
+  }
+  .titleWIthInput {
+    font-size: 54px;
+  }
+}

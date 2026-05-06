@@ -45,19 +45,19 @@ const Header = () => {
             >
               <Link
                 href={"/news"}
-                className={`${css.menuItem} ${mainSite ? css.menuItemHeroBlock : ""}`}
+                className={`${css.menuItem} ${mainSite ? css.menuItemHeroBlock : ""} ${pathname === '/news' ? css.isActivePage : ''}`}
               >
                 News
               </Link>
               <Link
                 href={"/notices"}
-                className={`${css.menuItem} ${mainSite ? css.menuItemHeroBlock : ""}`}
+                className={`${css.menuItem} ${mainSite ? css.menuItemHeroBlock : ""}  ${pathname === '/notices' ? css.isActivePage : ''}`}
               >
                 Find pet
               </Link>
               <Link
                 href={"/friends"}
-                className={`${css.menuItem} ${mainSite ? css.menuItemHeroBlock : ""}`}
+                className={`${css.menuItem} ${mainSite ? css.menuItemHeroBlock : ""}  ${pathname === '/friends' ? css.isActivePage : ''}`}
               >
                 Our friends
               </Link>

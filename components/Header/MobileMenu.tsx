@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import css from "./MobileMenu.module.css";
 import { Icons } from "../Icons/Icons";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -11,6 +12,8 @@ interface MobileMenuProps {
 }
 
 const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
+  const pathname = usePathname();
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -51,13 +54,22 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
           <Icons id="icon-cancel" width={32} height={32} stroke="#000000" />
         </button>
         <nav className={css.menuNav}>
-          <Link href={"/news"} className={css.menuItem}>
+          <Link
+            href={"/news"}
+            className={`${css.menuItem} ${pathname === "/news" ? css.isActivePage : ""}`}
+          >
             News
           </Link>
-          <Link href={"/notices"} className={css.menuItem}>
+          <Link
+            href={"/notices"}
+            className={`${css.menuItem} ${pathname === "/notices" ? css.isActivePage : ""}`}
+          >
             Find pet
           </Link>
-          <Link href={"/friends"} className={css.menuItem}>
+          <Link
+            href={"/friends"}
+            className={`${css.menuItem} ${pathname === "/friends" ? css.isActivePage : ""}`}
+          >
             Our friends
           </Link>
         </nav>

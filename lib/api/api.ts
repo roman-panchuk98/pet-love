@@ -1,5 +1,6 @@
 import axios from "axios";
 import { New } from "//types/new";
+import { PetOrganization } from "//types/friend";
 
 interface NewsHttpResponse {
   results: New[];
@@ -20,5 +21,10 @@ export async function getNews(
       page: page,
     },
   });
+  return response.data;
+}
+
+export async function getFriends(): Promise<PetOrganization[]> {
+  const response = await axios.get<PetOrganization[]>("/friends");
   return response.data;
 }

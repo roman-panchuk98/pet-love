@@ -104,6 +104,10 @@
       color 300ms ease-in-out;
   }
 
+  .isActivePage {
+    border-color: #f6b83d;
+  }
+
   .menuItem:hover,
   .menuItem:focus {
     background-color: #fff4df;

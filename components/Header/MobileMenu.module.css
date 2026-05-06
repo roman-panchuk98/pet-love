@@ -107,6 +107,10 @@
   background-color: #fbe7c1;
 }
 
+.isActivePage {
+  border-color: #f6b83d;
+}
+
 @media only screen and (min-width: 768px) {
   .menu {
     width: 374px;

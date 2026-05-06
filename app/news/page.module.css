@@ -9,12 +9,17 @@
   font-size: 30px;
 }
 
+.titleSearchBox {
+  margin-top: 34px;
+}
+
 @media only screen and (min-width: 768px) {
   .container {
     max-width: 768px;
     padding: 0 32px;
   }
   .titleSearchBox {
+    margin-top: 76px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 44px;
@@ -26,5 +31,8 @@
   .container {
     max-width: 1280px;
     padding: 0 64px;
+  }
+  .titleSearchBox {
+    margin-bottom: 60px;
   }
 }

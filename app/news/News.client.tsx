@@ -8,7 +8,7 @@ import NewsList from "../../components/NewsBlock/NewsList/NewsList";
 import NewsTitle from "//components/NewsBlock/NewsTitle/NewsTitle";
 import SearchField from "//components/NewsBlock/SearchField/SearchField";
 import Pagination from "//components/Pagination/Pagination";
-import { InstagramEmbed, TikTokEmbed } from "react-social-media-embed";
+import UniversalTitle from "//components/UniversalTitle/UniversalTitle";
 
 const NewsClient = () => {
   const [page, setPage] = useState<number>(1);
@@ -33,9 +33,9 @@ const NewsClient = () => {
   };
 
   return (
-    <div className={css.container}>
+    <section className={css.container}>
       <div className={css.titleSearchBox}>
-        <NewsTitle />
+        <UniversalTitle title="News" input />
         <SearchField
           value={inputValue}
           onChange={(ev) => setInputValue(ev.target.value)}
@@ -56,7 +56,7 @@ const NewsClient = () => {
       {data && data.results.length === 0 && (
         <p className={css.noNewsFound}> No news found for your query</p>
       )}
-    </div>
+    </section>
   );
 };
 

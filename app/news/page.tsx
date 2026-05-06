@@ -3,7 +3,6 @@ import {
   HydrationBoundary,
   QueryClient,
 } from "@tanstack/react-query";
-import React from "react";
 import { getNews } from "//lib/api/api";
 import NewsClient from "./News.client";
 
