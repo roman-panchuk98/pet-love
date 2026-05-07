@@ -13,7 +13,7 @@ const News = async () => {
   const searchWord = "";
 
   await queryClient.prefetchQuery({
-    queryKey: ["News", searchWord, page],
+    queryKey: ["news", searchWord, page],
     queryFn: () => getNews(searchWord, page),
   });
 

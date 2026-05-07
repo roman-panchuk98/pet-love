@@ -1,4 +1,4 @@
-import { Icons } from "../../Icons/Icons";
+import { Icons } from "../Icons/Icons";
 import css from "./SearchField.module.css";
 
 interface SearchFieldProps {

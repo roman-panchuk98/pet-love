@@ -5,8 +5,7 @@ import css from "./page.module.css";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { getNews } from "//lib/api/api";
 import NewsList from "../../components/NewsBlock/NewsList/NewsList";
-import NewsTitle from "//components/NewsBlock/NewsTitle/NewsTitle";
-import SearchField from "//components/NewsBlock/SearchField/SearchField";
+import SearchField from "../../components/SearchField/SearchField";
 import Pagination from "//components/Pagination/Pagination";
 import UniversalTitle from "//components/UniversalTitle/UniversalTitle";
 
@@ -16,7 +15,7 @@ const NewsClient = () => {
   const [inputValue, setInputValue] = useState<string>("");
 
   const { data } = useQuery({
-    queryKey: ["News", searchWord, page],
+    queryKey: ["news", searchWord, page],
     queryFn: () => getNews(searchWord, page),
     placeholderData: keepPreviousData,
   });
